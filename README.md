@@ -2,7 +2,7 @@
 
 This is the official website for OCaml mascot maintained by DAT5.
 
-![OCaml Website](https://ocaml.dk)
+[OCaml Website](https://ocaml.dk)
 
 ## Contributing
 Todo
