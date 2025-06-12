@@ -1,42 +1,31 @@
-# Portfolio Blog Starter
+# OCaml Website - DAT5
 
-This is a porfolio site template complete with a blog. Includes:
+This is the official website for OCaml mascot maintained by DAT5.
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+![OCaml Website](https://ocaml.dk)
 
-## Demo
+## Contributing
+Todo
 
-https://portfolio-blog-starter.vercel.app
+### Prerequisites
 
-## How to Use
+- Node.js (v18 or later)
+- pnpm package manager
 
-You can choose from one of the following two methods to use this repository:
+### Installation
 
-### One-Click Deploy
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dat5/ocaml-website.git
+   cd ocaml-website
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Start the development server:
+   ```bash
+   pnpm run dev
+   ```
+4. Open your browser and navigate to `http://localhost:3000` to view the website.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
-```
-
-Then, run Next.js in development mode:
-
-```bash
-pnpm dev
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
