@@ -2,9 +2,10 @@
 
 This is the official website for OCaml mascot maintained by DAT5.
 
-## Features
+![OCaml Website](https://ocaml.dk)
 
-## Getting Started
+## Contributing
+Todo
 
 ### Prerequisites
 
