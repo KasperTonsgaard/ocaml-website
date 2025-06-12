@@ -148,3 +148,8 @@ table {
 .title {
   text-wrap: balance;
 }
+
+.ocaml-model {
+  width: auto;
+  height: 100vh;
+}
