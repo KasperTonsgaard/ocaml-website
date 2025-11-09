@@ -13,6 +13,7 @@ const tools = [
     statusKey: 'tools.available',
     href: '/tools/au-rooms',
     websiteUrl: 'https://au-rooms.omikkel.com',
+    thumbnailUrl: '/images/tools/au-rooms-thumbnail.png',
     developer: { name: 'Mikkel Maae Østergaard', link: 'https://mikkelmaae.dev' },
     category: 'tools.categorySchedule',
     features: ['tools.auRooms.feature1', 'tools.auRooms.feature2', 'tools.auRooms.feature3']
@@ -61,11 +62,11 @@ export default function ToolsPage() {
               </p>
 
               {/* Thumbnail */}
-              {tool.id === 'au-rooms' && (
+              {tool.thumbnailUrl && (
                 <div className="mb-6">
                   <img 
-                    src="/images/tools/au-rooms-thumbnail.png" 
-                    alt="AU Room Schedule Finder"
+                    src={tool.thumbnailUrl}
+                    alt={t(tool.titleKey)}
                     className="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
                   />
                 </div>
