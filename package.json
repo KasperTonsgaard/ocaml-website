@@ -6,7 +6,10 @@
     "type": "git",
     "url": "git+https://github.com/KasperTonsgaard/ocaml-website.git"
   },
-  "authors": "Kasper Tonsgaard <kaspertonsgaard@gmail.com> (https://kaspertonsgaard.dk)",
+  "author": "Kasper Tonsgaard <kaspertonsgaard@gmail.com> (https://kaspertonsgaard.dk)",
+  "contributors": [
+    "Mikkel Maae Østergaard (https://mikkelmaae.dev) (https://github.com/OMikkel)"
+  ],
   "homepage": "https://ocaml.dk",
   "packageManager": "pnpm",
   "scripts": {

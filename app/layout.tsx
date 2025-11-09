@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
 import Footer from './components/footer'
+import { LocaleProvider } from './context/LocaleContext'
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ocaml.dk/"),
@@ -11,10 +12,10 @@ export const metadata: Metadata = {
     default: 'OCaml\'s Universe',
     template: '%s | OCaml\'s Universe',
   },
-  description: 'OCaml is the only real one, who is CShark.',
+  description: 'OCaml Univers - Made by DAT5 Class of 2024-2027 at Aarhus University.',
   openGraph: {
     title: 'OCaml\'s Universe',
-    description: 'OCaml is the only real one, who is CShark.',
+    description: 'OCaml Univers - Made by DAT5 Class of 2024-2027 at Aarhus University.',
     url: "https://www.ocaml.dk/",
     siteName: 'OCaml\'s Universe',
     locale: 'en_US',
@@ -50,11 +51,13 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1 px-6 py-8">
-          {children}
-        </main>
-        <Footer />
+        <LocaleProvider>
+          <Navbar />
+          <main className="flex-1 px-6 py-8">
+            {children}
+          </main>
+          <Footer />
+        </LocaleProvider>
       </body>
     </html>
   )

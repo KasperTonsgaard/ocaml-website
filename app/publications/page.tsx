@@ -2,15 +2,16 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faEye, faClock } from '@fortawesome/free-solid-svg-icons'
+import { useLocale } from '../context/LocaleContext'
 
 const publications = [
   {
     id: 'onp-book',
-    title: 'Grisen O(n)P og Master Teoremet',
-    description: 'A comprehensive guide to understanding and mastering the Master Theorem in algorithms and data structures. This book provides clear explanations, practical examples, and step-by-step approaches to solving recurrence relations using the Master Theorem. Written by Kristian Anton Hedegaard and Jeppe Tofft from the DAT5 class at Aarhus University.',
+    titleKey: 'publications.onpBook.title',
+    descriptionKey: 'publications.onpBook.description',
     date: 'November 2025',
-    status: 'Coming Soon',
-    type: 'Book',
+    statusKey: 'publications.comingSoon',
+    typeKey: 'publications.book',
     pages: '50+',
     format: 'PDF',
     size: '5.2 MB',
@@ -21,18 +22,20 @@ const publications = [
 ]
 
 export default function PublicationsPage() {
+  const { t } = useLocale()
+  
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Publications
+            {t('publications.title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A collection of books, papers, and other publications created by OCaml and the DAT5 class at Aarhus University.
+            {t('publications.description')}
             <br /><br />
-            Download and explore our academic contributions!
+            {t('publications.downloadExplore')}
           </p>
         </div>
 
@@ -47,15 +50,15 @@ export default function PublicationsPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      {publication.title}
+                      {t(publication.titleKey)}
                     </h2>
                     <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs font-medium">
-                      {publication.type}
+                      {t(publication.typeKey)}
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
                     <span>📅 {publication.date}</span>
-                    <span>📄 {publication.pages} pages</span>
+                    <span>📄 {publication.pages} {t('publications.pages')}</span>
                     <span>💾 {publication.size}</span>
                     <span>📋 {publication.format}</span>
                   </div>
@@ -67,13 +70,13 @@ export default function PublicationsPage() {
                       ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
                       : 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200'
                   }`}>
-                    {publication.status}
+                    {t(publication.statusKey)}
                   </span>
                 </div>
               </div>
               
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                {publication.description}
+                {t(publication.descriptionKey)}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
@@ -85,16 +88,16 @@ export default function PublicationsPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     >
-                      Download PDF
-                      <FontAwesomeIcon icon={faDownload} size="sm" />
+                      {t('publications.downloadPdf')}
+                      <FontAwesomeIcon icon={faDownload} size="sm" className="ml-2" />
                     </a>
                   ) : (
                     <button
                       disabled
                       className="inline-flex items-center px-6 py-3 bg-gray-400 text-gray-200 font-medium rounded-lg cursor-not-allowed opacity-60"
                     >
-                      Coming Soon
-                      <FontAwesomeIcon icon={faClock} size="sm" />
+                      {t('publications.comingSoon')}
+                      <FontAwesomeIcon icon={faClock} size="sm" className="ml-2" />
                     </button>
                   )}
                   
@@ -102,13 +105,13 @@ export default function PublicationsPage() {
                     href={publication.href}
                     className="inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                   >
-                    View Details
-                    <FontAwesomeIcon icon={faEye} size="sm" />
+                    {t('publications.viewDetails')}
+                    <FontAwesomeIcon icon={faEye} size="sm" className="ml-2" />
                   </Link>
                 </div>
                 
                 <div className="text-sm text-gray-500 dark:text-gray-400">
-                  Publication ID: {publication.id}
+                  {t('publications.publicationId')}: {publication.id}
                 </div>
               </div>
             </article>
@@ -118,10 +121,10 @@ export default function PublicationsPage() {
         {/* Coming Soon Section */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            More Publications Coming Soon
+            {t('publications.morePublications')}
           </h3>
           <p className="text-gray-600 dark:text-gray-300">
-            Stay tuned for more research papers, books, and academic contributions from the DAT5 community!
+            {t('publications.stayTunedPubs')}
           </p>
         </div>
       </div>
