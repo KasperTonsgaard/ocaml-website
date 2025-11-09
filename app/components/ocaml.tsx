@@ -30,6 +30,7 @@ export default function OCaml() {
         class="ocaml-model"
         src="models/OCamlHeadBop.glb"
         camera-controls
+        disable-pan
         tone-mapping="neutral"
         shadow-intensity="1.01"
         auto-rotate
