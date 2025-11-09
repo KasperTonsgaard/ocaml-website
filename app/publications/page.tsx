@@ -17,7 +17,7 @@ const publications = [
     size: '5.2 MB',
     href: '/publications/onp-book',
     downloadUrl: '/assets/publications/onp-book.pdf',
-    isAvailable: false // ← Change this to 'true' when PDF is uploaded to enable download
+    isAvailable: true // ← Change this to 'true' when PDF is uploaded to enable download
   }
 ]
 
