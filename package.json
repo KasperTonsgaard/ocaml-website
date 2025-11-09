@@ -1,19 +1,26 @@
 {
   "name": "ocaml-website",
   "version": "1.0.0",
-  "description": "OCaml's Treasurehunt",
+  "description": "OCaml's universe - Made by DAT5 Class of 2024-2027 at Aarhus University.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KasperTonsgaard/ocaml-website.git"
   },
-  "auther": "Kasper Tonsgaard <kaspertonsgaard@gmail.com> (https://kaspertonsgaard.dk)",
+  "author": "Kasper Tonsgaard <kaspertonsgaard@gmail.com> (https://kaspertonsgaard.dk)",
+  "contributors": [
+    "Mikkel Maae Østergaard (https://mikkelmaae.dev) (https://github.com/OMikkel)"
+  ],
   "homepage": "https://ocaml.dk",
+  "packageManager": "pnpm",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
     "@google/model-viewer": "^4.1.0",
     "@tailwindcss/postcss": "4.1.10",
     "@types/node": "24.0.3",
@@ -22,7 +29,7 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "geist": "1.4.2",
-    "next": "canary",
+    "next": "^16.0.1",
     "next-mdx-remote": "^5.0.0",
     "phaser": "^3.90.0",
     "postcss": "^8.5.6",
