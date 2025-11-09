@@ -59,6 +59,17 @@ export default function ToolsPage() {
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 {t(tool.descriptionKey)}
               </p>
+
+              {/* Thumbnail */}
+              {tool.id === 'au-rooms' && (
+                <div className="mb-6">
+                  <img 
+                    src="/images/tools/au-rooms-thumbnail.png" 
+                    alt="AU Room Schedule Finder"
+                    className="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+                  />
+                </div>
+              )}
               
               {/* Tool Details */}
               <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mb-6">

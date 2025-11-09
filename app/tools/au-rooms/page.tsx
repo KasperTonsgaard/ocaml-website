@@ -34,6 +34,15 @@ export default function AURoomsPage() {
           </p>
         </div>
 
+        {/* Thumbnail Preview */}
+        <div className="mb-8">
+          <img 
+            src="/images/tools/au-rooms-thumbnail.png" 
+            alt="AU Room Schedule Finder Screenshot"
+            className="w-full rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
+          />
+        </div>
+
         {/* Main Description */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
