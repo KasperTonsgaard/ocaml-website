@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 export function Navbar() {
   return (
-    <header className="w-full p-4 flex justify-center items-center border-b border-gray-300 dark:border-gray-700">
-        <div>
+    <header className="w-full p-4 flex justify-between items-center border-b border-gray-300 dark:border-gray-700">
+        <div className='whitespace-nowrap'>
             <h1>OCaml's Universe</h1>
         </div>
-        <div className='flex flex-grow justify-center items-center'>
+        <div className='flex grow justify-center items-center'>
             <nav>
                 <ul className="flex space-x-4">
                     <li>

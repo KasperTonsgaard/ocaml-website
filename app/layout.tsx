@@ -50,9 +50,9 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="">
+      <body className="h-screen w-screen overflow-hidden">
         <Navbar />
-        <main className="">
+        <main className="h-full overflow-auto">
           {children}
         </main>
       </body>
