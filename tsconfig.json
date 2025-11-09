@@ -32,7 +32,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/src/types/react.d.ts",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
