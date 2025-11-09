@@ -1,3 +1,4 @@
+"use client"
 import OCaml from 'app/components/ocaml'
 
 export default function Page() {
