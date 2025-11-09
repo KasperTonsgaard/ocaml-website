@@ -51,6 +51,7 @@ export default function RootLayout({
       )}
     >
       <body className="">
+        <Navbar />
         <main className="">
           {children}
         </main>
