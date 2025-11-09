@@ -9,17 +9,19 @@ import { LocaleProvider } from './context/LocaleContext'
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ocaml.dk/"),
   title: {
-    default: 'OCaml\'s Universe',
-    template: '%s | OCaml\'s Universe',
+    default: "OCaml's Universe",
+    template: "%s | OCaml's Universe",
   },
-  description: 'OCaml Univers - Made by DAT5 Class of 2024-2027 at Aarhus University.',
+  description:
+    "OCaml Universe - Made by DAT5 Class of 2024-2027 at Aarhus University.",
   openGraph: {
-    title: 'OCaml\'s Universe',
-    description: 'OCaml Univers - Made by DAT5 Class of 2024-2027 at Aarhus University.',
+    title: "OCaml's Universe",
+    description:
+      "OCaml Universe - Made by DAT5 Class of 2024-2027 at Aarhus University.",
     url: "https://www.ocaml.dk/",
-    siteName: 'OCaml\'s Universe',
-    locale: 'en_US',
-    type: 'website',
+    siteName: "OCaml's Universe",
+    locale: "en_US",
+    type: "website",
   },
   robots: {
     index: true,
@@ -27,12 +29,12 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
 const cx = (...classes) => classes.filter(Boolean).join(' ')
 
