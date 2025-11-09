@@ -24,6 +24,8 @@ export default function OCaml() {
       <Script
         type="module"
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+        strategy="lazyOnload"
+        crossOrigin="anonymous"
       />
       <model-viewer
         ref={modelViewerRef}
