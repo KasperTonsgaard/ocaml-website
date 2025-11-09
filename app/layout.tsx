@@ -4,10 +4,9 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
 import Footer from './components/footer'
-import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL("https://www.ocaml.dk/"),
   title: {
     default: 'OCaml\'s Universe',
     template: '%s | OCaml\'s Universe',
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OCaml\'s Universe',
     description: 'OCaml is the only real one, who is CShark.',
-    url: baseUrl,
+    url: "https://www.ocaml.dk/",
     siteName: 'OCaml\'s Universe',
     locale: 'en_US',
     type: 'website',
@@ -55,6 +54,7 @@ export default function RootLayout({
         <main className="h-full overflow-auto">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )

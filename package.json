@@ -1,5 +1,13 @@
 {
-  "private": true,
+  "name": "ocaml-website",
+  "version": "1.0.0",
+  "description": "OCaml's Treasurehunt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KasperTonsgaard/ocaml-website.git"
+  },
+  "auther": "Kasper Tonsgaard <kaspertonsgaard@gmail.com> (https://kaspertonsgaard.dk)",
+  "homepage": "https://ocaml.dk",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -7,21 +15,22 @@
   },
   "dependencies": {
     "@google/model-viewer": "^4.1.0",
-    "@tailwindcss/postcss": "4.0.0-alpha.13",
-    "@types/node": "20.11.17",
-    "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.19",
-    "@vercel/analytics": "^1.1.3",
-    "@vercel/speed-insights": "^1.0.9",
-    "geist": "1.2.2",
+    "@tailwindcss/postcss": "4.1.10",
+    "@types/node": "24.0.3",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "geist": "1.4.2",
     "next": "canary",
-    "next-mdx-remote": "^4.4.1",
-    "postcss": "^8.4.35",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sugar-high": "^0.6.0",
-    "tailwindcss": "4.0.0-alpha.13",
-    "three": "^0.177.0",
-    "typescript": "5.3.3"
+    "next-mdx-remote": "^5.0.0",
+    "phaser": "^3.90.0",
+    "postcss": "^8.5.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "sugar-high": "^0.9.3",
+    "tailwindcss": "4.1.10",
+    "three": "^0.172.0",
+    "typescript": "5.8.3"
   }
 }
