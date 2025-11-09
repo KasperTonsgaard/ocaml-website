@@ -44,14 +44,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        'text-black bg-white dark:text-white dark:bg-slate-900',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="h-screen w-screen overflow-hidden">
+      <body className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="h-full overflow-auto">
+        <main className="flex-1 px-6 py-8">
           {children}
         </main>
         <Footer />
