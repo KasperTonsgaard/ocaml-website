@@ -1,9 +1,15 @@
 import { ModelViewerElement } from "@google/model-viewer";
+import * as React from "react";
 
-export declare global {
+declare global {
   namespace JSX {
     interface IntrinsicElements {
-      "model-viewer": React.DetailedHTMLProps<Partial<ModelViewerElement>>;
+      "model-viewer": React.DetailedHTMLProps<
+        React.HTMLAttributes<ModelViewerElement> & Partial<ModelViewerElement>,
+        ModelViewerElement
+      >;
     }
   }
 }
+
+export {};
