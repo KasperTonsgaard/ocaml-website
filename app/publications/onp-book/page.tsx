@@ -5,7 +5,7 @@ import { faArrowLeft, faDownload, faClock } from '@fortawesome/free-solid-svg-ic
 import { useLocale } from '../../context/LocaleContext'
 
 // ← Change this to 'true' when PDF is uploaded to enable download
-const isBookAvailable = false
+const isBookAvailable = true
 
 export default function ONPBookPage() {
   const { t } = useLocale()
