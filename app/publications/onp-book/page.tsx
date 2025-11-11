@@ -205,6 +205,7 @@ export default function ONPBookPage() {
             </p>
             {isBookAvailable ? (
               <a
+                download
                 href="/assets/publications/onp-book.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
