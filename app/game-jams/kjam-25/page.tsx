@@ -1,11 +1,37 @@
 "use client"
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faExpand, faCompress } from '@fortawesome/free-solid-svg-icons'
 import { useLocale } from '../../context/LocaleContext'
+import { useRef, useState } from 'react'
 
 export default function Page() {
     const { t } = useLocale()
+    const gameContainerRef = useRef<HTMLElement>(null)
+    const [isFullscreen, setIsFullscreen] = useState(false)
+
+    const toggleFullscreen = () => {
+      if (!gameContainerRef.current) return
+
+      if (!document.fullscreenElement) {
+        gameContainerRef.current.requestFullscreen().then(() => {
+          setIsFullscreen(true)
+        }).catch((err) => {
+          console.error('Error attempting to enable fullscreen:', err)
+        })
+      } else {
+        document.exitFullscreen().then(() => {
+          setIsFullscreen(false)
+        })
+      }
+    }
+
+    // Listen for fullscreen changes
+    if (typeof document !== 'undefined') {
+      document.addEventListener('fullscreenchange', () => {
+        setIsFullscreen(!!document.fullscreenElement)
+      })
+    }
     
     return (
       <div className="min-h-screen bg-white dark:bg-gray-900">
@@ -41,7 +67,8 @@ export default function Page() {
 
           {/* Game Iframe */}
           <section
-            className="w-full rounded-lg overflow-hidden shadow-lg mb-8"
+            ref={gameContainerRef}
+            className="w-full rounded-lg overflow-hidden shadow-lg mb-8 relative bg-black"
             style={{ height: "80vh", minHeight: "600px" }}
           >
             <iframe
@@ -49,6 +76,16 @@ export default function Page() {
               className="w-full h-full border-0"
               title="K-Jam 25 Game"
             />
+            <button
+              onClick={toggleFullscreen}
+              className="absolute top-4 right-4 bg-gray-800 bg-opacity-75 hover:bg-opacity-100 text-white px-4 py-2 rounded-lg transition-all duration-200 flex items-center gap-2 z-10"
+              aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+            >
+              <FontAwesomeIcon icon={isFullscreen ? faCompress : faExpand} />
+              <span className="text-sm font-medium">
+                {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+              </span>
+            </button>
           </section>
 
           {/* Game Details */}
