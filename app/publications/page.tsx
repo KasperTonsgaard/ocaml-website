@@ -12,9 +12,9 @@ const publications = [
     date: 'November 2025',
     statusKey: 'publications.comingSoon',
     typeKey: 'publications.book',
-    pages: '50+',
+    pages: '16',
     format: 'PDF',
-    size: '5.2 MB',
+    size: '2.4 MB',
     href: '/publications/onp-book',
     downloadUrl: '/assets/publications/onp-book.pdf',
     isAvailable: true // ← Change this to 'true' when PDF is uploaded to enable download
