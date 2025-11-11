@@ -37,13 +37,13 @@ export default function ONPBookPage() {
               {t('publications.book')}
             </span>
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-              50+ {t('publications.pages')}
+              16 {t('publications.pages')}
             </span>
             <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">
               {t('publications.format')} PDF
             </span>
             <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full">
-              5.2 MB
+              2.4 MB
             </span>
             <span className={`px-3 py-1 rounded-full ${
               isBookAvailable 
@@ -205,6 +205,7 @@ export default function ONPBookPage() {
             </p>
             {isBookAvailable ? (
               <a
+                download
                 href="/assets/publications/onp-book.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

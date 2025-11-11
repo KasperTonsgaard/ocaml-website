@@ -12,9 +12,9 @@ const publications = [
     date: 'November 2025',
     statusKey: 'publications.comingSoon',
     typeKey: 'publications.book',
-    pages: '50+',
+    pages: '16',
     format: 'PDF',
-    size: '5.2 MB',
+    size: '2.4 MB',
     href: '/publications/onp-book',
     downloadUrl: '/assets/publications/onp-book.pdf',
     isAvailable: true // ← Change this to 'true' when PDF is uploaded to enable download
@@ -64,15 +64,17 @@ export default function PublicationsPage() {
                   </div>
                 </div>
                 
-                <div className="flex flex-col md:items-end text-sm text-gray-500 dark:text-gray-400">
-                  <span className={`mt-1 px-3 py-1 rounded-full text-xs font-medium ${
-                    publication.isAvailable 
-                      ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
-                      : 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200'
-                  }`}>
-                    {t(publication.statusKey)}
-                  </span>
-                </div>
+                {!publication.isAvailable && (
+                    <div className="flex flex-col md:items-end text-sm text-gray-500 dark:text-gray-400">
+                        <span className={`mt-1 px-3 py-1 rounded-full text-xs font-medium ${
+                            publication.isAvailable 
+                            ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
+                            : 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200'
+                        }`}>
+                            {t(publication.statusKey)}
+                        </span>
+                    </div>
+                )}
               </div>
               
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
@@ -83,6 +85,7 @@ export default function PublicationsPage() {
                 <div className="flex flex-col sm:flex-row gap-3">
                   {publication.isAvailable ? (
                     <a
+                      download
                       href={publication.downloadUrl}
                       target="_blank"
                       rel="noopener noreferrer"
