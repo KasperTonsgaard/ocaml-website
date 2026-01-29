@@ -6,6 +6,18 @@ import { useLocale } from '../context/LocaleContext'
 
 const tools = [
   {
+    id: 'au-exams',
+    titleKey: 'tools.auExams.title',
+    descriptionKey: 'tools.auExams.description',
+    date: 'November 2025',
+    statusKey: 'tools.available',
+    websiteUrl: 'https://auexam.froemosen.dk',
+    thumbnailUrl: '/images/tools/au-exams-thumbnail.png',
+    developer: { name: 'Kristian Anton Hedegaard', link: 'https://froemosen.dk' },
+    category: 'tools.categorySchedule',
+    features: ['tools.auExams.feature1', 'tools.auExams.feature2', 'tools.auExams.feature3']
+  },
+  {
     id: 'au-rooms',
     titleKey: 'tools.auRooms.title',
     descriptionKey: 'tools.auRooms.description',
