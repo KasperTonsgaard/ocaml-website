@@ -26,7 +26,7 @@ export default function AURoomsPage() {
               {t('tools.auRooms.title')}
             </h1>
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">
-              {t('tools.categorySchedule')}
+              {t('tools.categories.scheduleViewer')}
             </span>
           </div>
           <p className="text-xl text-gray-600 dark:text-gray-300">

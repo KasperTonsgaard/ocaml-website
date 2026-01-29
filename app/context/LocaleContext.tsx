@@ -168,7 +168,10 @@ const translations = {
       stayTuned: 'Hold øje med flere nyttige værktøjer og projekter fra DAT5 fællesskabet!',
       backToTools: 'Tilbage til Værktøjer',
       available: 'Tilgængelig',
-      categorySchedule: 'Skemavisning',
+      categories: {
+        scheduleViewer: "Skemavisning",
+        examViewer: "Examvisning",
+      },
       toolDetails: 'Værktøjsdetaljer',
       releaseDate: 'Udgivelsesdato',
       status: 'Status',
@@ -327,7 +330,10 @@ const translations = {
       stayTuned: 'Stay tuned for more useful tools and projects from the DAT5 community!',
       backToTools: 'Back to Tools',
       available: 'Available',
-      categorySchedule: 'Schedule Viewer',
+      categories: {
+        scheduleViewer: 'Schedule Viewer',
+        examViewer: 'Exam Viewer',
+      },
       toolDetails: 'Tool Details',
       releaseDate: 'Release Date',
       status: 'Status',
