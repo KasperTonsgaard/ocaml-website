@@ -29,7 +29,19 @@ const tools = [
     developer: { name: 'Mikkel Maae Østergaard', link: 'https://mikkelmaae.dev' },
     category: 'tools.categories.scheduleViewer',
     features: ['tools.auRooms.feature1', 'tools.auRooms.feature2', 'tools.auRooms.feature3']
-  }
+  },
+  {
+    id: 'au-calendar-middleware',
+    titleKey: 'tools.auCalendarMiddleware.title',
+    descriptionKey: 'tools.auCalendarMiddleware.description',
+    date: 'November 2024',
+    statusKey: 'tools.available',
+    websiteUrl: 'https://github.com/omikkel/au-calendar-middleware',
+    thumbnailUrl: '/images/tools/au-calendar-middleware.png',
+    developer: { name: 'Mikkel Maae Østergaard', link: 'https://mikkelmaae.dev' },
+    category: 'tools.categories.calendarMiddleware',
+    features: ['tools.auCalendarMiddleware.feature1', 'tools.auCalendarMiddleware.feature2', 'tools.auCalendarMiddleware.feature3']
+  },
 ]
 
 export default function ToolsPage() {
