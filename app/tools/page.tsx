@@ -14,7 +14,7 @@ const tools = [
     websiteUrl: 'https://auexam.froemosen.dk',
     thumbnailUrl: '/images/tools/au-exams-thumbnail.png',
     developer: { name: 'Kristian Anton Hedegaard', link: 'https://froemosen.dk' },
-    category: 'tools.categorySchedule',
+    category: 'tools.categories.examViewer',
     features: ['tools.auExams.feature1', 'tools.auExams.feature2', 'tools.auExams.feature3']
   },
   {
@@ -27,7 +27,7 @@ const tools = [
     websiteUrl: 'https://au-rooms.omikkel.com',
     thumbnailUrl: '/images/tools/au-rooms-thumbnail.png',
     developer: { name: 'Mikkel Maae Østergaard', link: 'https://mikkelmaae.dev' },
-    category: 'tools.categorySchedule',
+    category: 'tools.categories.scheduleViewer',
     features: ['tools.auRooms.feature1', 'tools.auRooms.feature2', 'tools.auRooms.feature3']
   }
 ]
