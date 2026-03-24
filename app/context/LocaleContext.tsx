@@ -171,6 +171,7 @@ const translations = {
       categories: {
         scheduleViewer: "Skemavisning",
         examViewer: "Examvisning",
+        calendarMiddleware: "Kalender Middleware",
       },
       toolDetails: 'Værktøjsdetaljer',
       releaseDate: 'Udgivelsesdato',
@@ -346,6 +347,7 @@ const translations = {
       categories: {
         scheduleViewer: 'Schedule Viewer',
         examViewer: 'Exam Viewer',
+        calendarMiddleware: 'Calendar Middleware',
       },
       toolDetails: 'Tool Details',
       releaseDate: 'Release Date',
