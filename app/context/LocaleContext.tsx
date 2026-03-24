@@ -171,6 +171,7 @@ const translations = {
       categories: {
         scheduleViewer: "Skemavisning",
         examViewer: "Examvisning",
+        calendarMiddleware: "Kalender Middleware",
       },
       toolDetails: 'Værktøjsdetaljer',
       releaseDate: 'Udgivelsesdato',
@@ -206,6 +207,19 @@ const translations = {
         feature3: 'Personlig Planlægning',
         feature3Desc: 'Få et overblik over dine kommende eksamener',
       },
+      auCalendarMiddleware: {
+        title: 'AU Kalender Middleware',
+        subtitle: 'Opdaterer og forbedrer AU Kalender data. Lader dig frasortere begivenheder.',
+        aboutTool: 'Om Dette Værktøj',
+        description: 'AU Kalender Middleware er et værktøj der opdaterer og forbedrer AU Kalender data ved at lade dig frasortere begivenheder, så du kun ser det der er relevant for dig.',
+        longDescription: "Træt af at se irrelevante begivenheder i din AU Kalender? Dette værktøj fungerer som en middleware der filtrerer og forbedrer kalenderdataene, så du kun får vist de begivenheder der betyder noget for dig. Tilpas din kalenderoplevelse og hold fokus på det vigtige.",
+        feature1: 'Nem Filtrering',
+        feature1Desc: 'Frasortér irrelevante begivenheder fra din AU Kalender',
+        feature2: 'Opdaterede Kalenderdata',
+        feature2Desc: 'Få forbedrede og rensede kalenderdata',
+        feature3: 'Personlig Kalenderoplevelse',
+        feature3Desc: 'Tilpas din kalenderoplevelse og hold fokus på det vigtige',
+      }
     },
     footer: {
       universe: 'OCaml\'s Univers',
@@ -333,6 +347,7 @@ const translations = {
       categories: {
         scheduleViewer: 'Schedule Viewer',
         examViewer: 'Exam Viewer',
+        calendarMiddleware: 'Calendar Middleware',
       },
       toolDetails: 'Tool Details',
       releaseDate: 'Release Date',
@@ -368,6 +383,19 @@ const translations = {
         feature3: 'Personal Planning',
         feature3Desc: 'Get an overview of your upcoming exams',
       },
+      auCalendarMiddleware: {
+        title: 'AU Calendar Middleware',
+        subtitle: 'Updates and enhances AU Calendar data. Allows you to filter out events.',
+        aboutTool: 'About This Tool',
+        description: 'AU Calendar Middleware is a tool that updates and enhances AU Calendar data by allowing you to filter out events, so you only see what is relevant to you.',
+        longDescription: "Tired of seeing irrelevant events in your AU Calendar? This tool acts as middleware that filters and enhances the calendar data, so you only get shown the events that matter to you. Customize your calendar experience and stay focused on what’s important.",
+        feature1: 'Easy Filtering',
+        feature1Desc: 'Filter out irrelevant events from your AU Calendar',
+        feature2: 'Updated Calendar Data',
+        feature2Desc: 'Get enhanced and cleaned calendar data',
+        feature3: 'Personal Calendar Experience',
+        feature3Desc: 'Customize your calendar experience and stay focused on what’s important',
+      }
     },
     footer: {
       universe: 'OCaml\'s Universe',
