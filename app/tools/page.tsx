@@ -42,6 +42,18 @@ const tools = [
     category: 'tools.categories.calendarMiddleware',
     features: ['tools.auCalendarMiddleware.feature1', 'tools.auCalendarMiddleware.feature2', 'tools.auCalendarMiddleware.feature3']
   },
+  {
+    id: 'easy-prover',
+    titleKey: 'Easy Prover!',
+    descriptionKey: 'tools.easyProver.description',
+    date: '2026',
+    statusKey: 'tools.available',
+    websiteUrl: 'https://easyprover.org',
+    thumbnailUrl: '/images/tools/easy-prover.png',
+    developer: { name: 'Jeppe Tofft', link: 'https://www.youtube.com/@jeppetofft' },
+    category: 'tools.categories.math',
+    features: ['tools.easyProver.feature1']
+  },
 ]
 
 export default function ToolsPage() {
