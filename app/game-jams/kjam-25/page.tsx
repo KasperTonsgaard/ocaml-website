@@ -110,7 +110,16 @@ export default function Page() {
                     {t("gameJams.developers")}:
                   </strong>
                   <ul className="text-gray-700 dark:text-gray-300 list-disc list-inside mt-1">
-                    <li>Kristian Anton Hedegaard</li>
+                    <li>
+                      <a
+                        href="https://froemosen.dk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        Kristian Anton Hedegaard
+                      </a>
+                    </li>
                     <li>
                       <a
                         href="https://mikkelmaae.dev"

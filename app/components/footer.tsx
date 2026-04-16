@@ -18,7 +18,7 @@ export default function Footer() {
           
           <div className="flex items-center gap-6 text-sm">
             <a 
-              href="https://github.com/KasperTonsgaard" 
+              href="https://github.com/KasperTonsgaard/ocaml-website" 
               className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors flex items-center gap-1"
               target="_blank"
               rel="noopener noreferrer"
