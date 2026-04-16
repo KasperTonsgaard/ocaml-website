@@ -15,7 +15,7 @@ const gameJams = [
     statusKey: 'gameJams.kjam25.status',
     href: '/game-jams/kjam-25',
     developers: [
-      { name: 'Kristian Anton Hedegaard' },
+      { name: 'Kristian Anton Hedegaard', link: 'https://froemosen.dk' },
       { name: 'Mikkel Maae Østergaard', link: 'https://mikkelmaae.dev' }
     ],
     hostedByKey: 'gameJams.kjam25.hostedBy',
@@ -122,7 +122,7 @@ export default function GameJamsPage() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between">
+              <div>
                 {jam.external ? (
                   <a
                     href={jam.href}
@@ -142,10 +142,6 @@ export default function GameJamsPage() {
                     <FontAwesomeIcon icon={faGamepad} size="sm" className="ml-2" />
                   </Link>
                 )}
-
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  {t('gameJams.gameId')}: {jam.id}
-                </div>
               </div>
             </ContentCard>
           ))}

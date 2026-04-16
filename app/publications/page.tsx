@@ -80,41 +80,35 @@ export default function PublicationsPage() {
                 {t(publication.descriptionKey)}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  {publication.isAvailable ? (
-                    <a
-                      download
-                      href={publication.downloadUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                    >
-                      {t('publications.downloadPdf')}
-                      <FontAwesomeIcon icon={faDownload} size="sm" className="ml-2" />
-                    </a>
-                  ) : (
-                    <button
-                      disabled
-                      className="inline-flex items-center px-6 py-3 bg-gray-400 text-gray-200 font-medium rounded-lg cursor-not-allowed opacity-60"
-                    >
-                      {t('publications.comingSoon')}
-                      <FontAwesomeIcon icon={faClock} size="sm" className="ml-2" />
-                    </button>
-                  )}
-
-                  <Link
-                    href={publication.href}
-                    className="inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              <div className="flex flex-col sm:flex-row gap-3">
+                {publication.isAvailable ? (
+                  <a
+                    download
+                    href={publication.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   >
-                    {t('publications.viewDetails')}
-                    <FontAwesomeIcon icon={faEye} size="sm" className="ml-2" />
-                  </Link>
-                </div>
+                    {t('publications.downloadPdf')}
+                    <FontAwesomeIcon icon={faDownload} size="sm" className="ml-2" />
+                  </a>
+                ) : (
+                  <button
+                    disabled
+                    className="inline-flex items-center px-6 py-3 bg-gray-400 text-gray-200 font-medium rounded-lg cursor-not-allowed opacity-60"
+                  >
+                    {t('publications.comingSoon')}
+                    <FontAwesomeIcon icon={faClock} size="sm" className="ml-2" />
+                  </button>
+                )}
 
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  {t('publications.publicationId')}: {publication.id}
-                </div>
+                <Link
+                  href={publication.href}
+                  className="inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                >
+                  {t('publications.viewDetails')}
+                  <FontAwesomeIcon icon={faEye} size="sm" className="ml-2" />
+                </Link>
               </div>
             </ContentCard>
           ))}

@@ -9,7 +9,7 @@ const navItems = {
     '/': 'nav.home',
     '/game-jams': 'nav.gameJams',
     '/publications': 'nav.publications',
-    '/tools': 'nav.tools',
+    '/projects': 'nav.projects',
 }
 
 export function Navbar() {
