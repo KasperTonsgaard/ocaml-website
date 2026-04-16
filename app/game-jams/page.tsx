@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGamepad, faArrowUpRightFromSquare, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { useLocale } from '../context/LocaleContext'
+import ContentGrid from '../components/ContentGrid'
+import ContentCard from '../components/ContentCard'
 
 const gameJams = [
   {
@@ -44,7 +46,7 @@ export default function GameJamsPage() {
   
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -57,13 +59,10 @@ export default function GameJamsPage() {
           </p>
         </div>
 
-        {/* Game Jams List */}
-        <div className="space-y-8">
+        {/* Game Jams Grid */}
+        <ContentGrid>
           {gameJams.map((jam) => (
-            <article 
-              key={jam.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
-            >
+            <ContentCard key={jam.id}>
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 md:mb-0">
                   {t(jam.titleKey)}
@@ -75,14 +74,14 @@ export default function GameJamsPage() {
                   </span>
                 </div>
               </div>
-              
+
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 {t(jam.descriptionKey)}
               </p>
-              
-              {/* Game Jam Details */}
+
+              {/* Game Jam Details — stacked for narrower cards */}
               <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mb-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="space-y-3 text-sm">
                   <div>
                     <strong className="text-gray-900 dark:text-white block mb-1">{t('gameJams.developers')}:</strong>
                     <ul className="text-gray-700 dark:text-gray-300 list-disc list-inside">
@@ -110,7 +109,7 @@ export default function GameJamsPage() {
                   </div>
                   <div>
                     <strong className="text-gray-900 dark:text-white block mb-1">{t('gameJams.gameJam')}:</strong>
-                    <a 
+                    <a
                       href={jam.jamWebsite}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -122,7 +121,7 @@ export default function GameJamsPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 {jam.external ? (
                   <a
@@ -143,14 +142,14 @@ export default function GameJamsPage() {
                     <FontAwesomeIcon icon={faGamepad} size="sm" className="ml-2" />
                   </Link>
                 )}
-                
+
                 <div className="text-sm text-gray-500 dark:text-gray-400">
                   {t('gameJams.gameId')}: {jam.id}
                 </div>
               </div>
-            </article>
+            </ContentCard>
           ))}
-        </div>
+        </ContentGrid>
 
         {/* Coming Soon Section */}
         <div className="mt-16 text-center">
