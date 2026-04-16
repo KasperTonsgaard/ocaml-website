@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTools, faArrowUpRightFromSquare, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import { useLocale } from '../context/LocaleContext'
+import ContentGrid from '../components/ContentGrid'
+import ContentCard from '../components/ContentCard'
 
 const tools = [
   {
@@ -61,7 +63,7 @@ export default function ToolsPage() {
   
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -74,13 +76,10 @@ export default function ToolsPage() {
           </p>
         </div>
 
-        {/* Tools List */}
-        <div className="space-y-8">
+        {/* Tools Grid */}
+        <ContentGrid>
           {tools.map((tool) => (
-            <article 
-              key={tool.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
-            >
+            <ContentCard key={tool.id}>
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 md:mb-0">
                   {t(tool.titleKey)}
@@ -92,7 +91,7 @@ export default function ToolsPage() {
                   </span>
                 </div>
               </div>
-              
+
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 {t(tool.descriptionKey)}
               </p>
@@ -100,17 +99,17 @@ export default function ToolsPage() {
               {/* Thumbnail */}
               {tool.thumbnailUrl && (
                 <div className="mb-6">
-                  <img 
+                  <img
                     src={tool.thumbnailUrl}
                     alt={t(tool.titleKey)}
                     className="w-full rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
                   />
                 </div>
               )}
-              
-              {/* Tool Details */}
+
+              {/* Tool Details — stacked single column for narrower cards */}
               <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mb-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div className="space-y-3 text-sm">
                   <div>
                     <strong className="text-gray-900 dark:text-white block mb-1">{t('tools.developer')}:</strong>
                     <p className="text-gray-700 dark:text-gray-300">
@@ -129,7 +128,7 @@ export default function ToolsPage() {
                     <p className="text-gray-700 dark:text-gray-300">{t(tool.category)}</p>
                   </div>
                 </div>
-                
+
                 {/* Features */}
                 <div className="mt-4">
                   <strong className="text-gray-900 dark:text-white block mb-2">{t('tools.keyFeatures')}:</strong>
@@ -151,7 +150,7 @@ export default function ToolsPage() {
                     <FontAwesomeIcon icon={faTools} size="sm" className="ml-2" />
                   </Link>
                 )}
-                
+
                 <a
                   href={tool.websiteUrl}
                   target="_blank"
@@ -162,9 +161,9 @@ export default function ToolsPage() {
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="sm" className="ml-2" />
                 </a>
               </div>
-            </article>
+            </ContentCard>
           ))}
-        </div>
+        </ContentGrid>
 
         {/* Coming Soon Section */}
         <div className="mt-16 text-center p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
