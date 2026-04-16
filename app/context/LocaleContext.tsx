@@ -172,6 +172,7 @@ const translations = {
         scheduleViewer: "Skemavisning",
         examViewer: "Examvisning",
         calendarMiddleware: "Kalender Middleware",
+        math: 'Matematik',
       },
       toolDetails: 'Værktøjsdetaljer',
       releaseDate: 'Udgivelsesdato',
@@ -219,6 +220,15 @@ const translations = {
         feature2Desc: 'Få forbedrede og rensede kalenderdata',
         feature3: 'Personlig Kalenderoplevelse',
         feature3Desc: 'Tilpas din kalenderoplevelse og hold fokus på det vigtige',
+      },
+      easyProver: {
+        title: 'Easy Prover!',
+        subtitle: 'Lav logiske beviser med drag and drop.',
+        aboutTool: 'Om Dette Værktøj',
+        description: 'Lav beviser i propositionel logik i et simpelt og intuitivt drag and drop værktøj.',
+        longDescription: "Synes du systemer som Box Prover og Logic Box er for svære at bruge? Med Easy Prover kan du let flytte simple klodser rundt for at bygge et bevis.",
+        feature1: 'Prove by drag and drop',
+        feature1Desc: 'Opbyg dine beviser med drag and drop.',
       }
     },
     footer: {
@@ -348,6 +358,7 @@ const translations = {
         scheduleViewer: 'Schedule Viewer',
         examViewer: 'Exam Viewer',
         calendarMiddleware: 'Calendar Middleware',
+        math: 'Math',
       },
       toolDetails: 'Tool Details',
       releaseDate: 'Release Date',
@@ -395,6 +406,15 @@ const translations = {
         feature2Desc: 'Get enhanced and cleaned calendar data',
         feature3: 'Personal Calendar Experience',
         feature3Desc: 'Customize your calendar experience and stay focused on what’s important',
+      },
+      easyProver: {
+        title: 'Easy Prover!',
+        subtitle: 'Build logical proofs with drag and drop.',
+        aboutTool: 'About This Tool',
+        description: 'Create proofs in propositional logic in a simple and intuitive drag and drop tool.',
+        longDescription: "Do you find systems like Box Prover and Logic Box too difficult to use? With Easy Prover, you can easily move simple blocks around to build a proof.",
+        feature1: 'Prove by drag and drop',
+        feature1Desc: 'Build your proofs with drag and drop.',
       }
     },
     footer: {
